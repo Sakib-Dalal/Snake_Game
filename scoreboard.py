@@ -12,11 +12,15 @@ class Score(Turtle):
         self.color("White")
         self.hideturtle()
         self.penup()
-        self.goto(0, 280)
+        self.goto(0, 270)
         self.update_score()
 
     def update_score(self):
-        self.write(f"Score: {self.score}", False, ALIGN, FONT)
+        self.write(f"🏁Score 🐍: {self.score}", False, ALIGN, FONT)
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write(f"GAME 🐍 OVER 😭.", False, ALIGN, FONT)
 
     def refresh_score(self):
         self.clear()
